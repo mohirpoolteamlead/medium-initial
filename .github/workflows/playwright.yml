@@ -1,7 +1,14 @@
 name: Medium Clone Front-End CI/CD
 on:
-  push:
-    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      tests_path:
+        description: "Tests path"
+        required: false
+        default: ""
+      github_feedback_id:
+        description: "Github feedback id"
+        required: true
 
 jobs:
   deploy:
