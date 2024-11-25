@@ -54,14 +54,20 @@ jobs:
 
       - name: Run Playwright tests
         working-directory: forked-repo
-        run: npx playwright test ${{ github.event.inputs.tests_path }} --reporter=json --output=playwright-report.json
+        run: npx playwright test
         continue-on-error: true
+
+      - name: Verify Playwright Report
+        working-directory: forked-repo
+        run: ls -la playwright-report.json
 
       - name: Upload Playwright JSON report as an artifact
         uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: forked-repo/playwright-report.json
+          path: playwright-report/
+          retention-days: 30
 
       - name: Send a signal to the webhook that the job has finished.
         if: always()
