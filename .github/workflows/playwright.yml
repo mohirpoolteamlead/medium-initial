@@ -55,6 +55,14 @@ jobs:
         working-directory: forked-repo
         run: npm ci
 
+      - name: Cache Playwright Browsers
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            playwright-browsers-${{ runner.os }}-
+
       - name: Install Playwright Browsers
         working-directory: forked-repo
         run: npx playwright install --with-deps
