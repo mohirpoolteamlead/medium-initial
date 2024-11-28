@@ -67,6 +67,20 @@ jobs:
         working-directory: forked-repo
         run: npx playwright install --with-deps
 
+      - name: Start the application
+        working-directory: forked-repo
+        run: |
+          nohup npm run dev -- --port 5173 &  # Start the app in the background
+          sleep 5  # Wait a few seconds for the app to start
+
+      - name: Wait for localhost:5173 to be ready
+        run: |
+          until curl --silent --fail http://localhost:5173; do
+            echo "Waiting for the app to start..."
+            sleep 5
+          done
+          echo "App is up and running!"
+
       - name: Run Playwright tests
         working-directory: forked-repo
         run: npx playwright test
