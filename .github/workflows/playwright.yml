@@ -83,7 +83,7 @@ jobs:
 
       - name: Run Playwright tests
         working-directory: forked-repo
-        run: npx playwright test --workers=4
+        run: npx playwright test ${{ github.event.inputs.tests_path }} --workers=4
         continue-on-error: true
 
       - name: Verify Playwright Report

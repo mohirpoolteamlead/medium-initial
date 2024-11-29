@@ -79,20 +79,20 @@
   },
   "suites": [
     {
-      "title": "example.spec.ts",
-      "file": "example.spec.ts",
+      "title": "first-lesson.spec.ts",
+      "file": "first-lesson.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Medium Clone App",
-          "file": "example.spec.ts",
+          "title": "Home Page",
+          "file": "first-lesson.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "renders the Medium Clone heading",
+              "title": "should display all navigation buttons",
               "ok": true,
               "tags": [],
               "tests": [
@@ -106,25 +106,89 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 1747,
+                      "duration": 6968,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-28T06:47:55.918Z",
+                      "startTime": "2024-11-29T06:34:36.279Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "a30a6eba6312f6b87ea5-5ab2793829c56c63ceed",
-              "file": "example.spec.ts",
+              "id": "9170ad62ed911ff49afe-67a8612a9cd8332733dc",
+              "file": "first-lesson.spec.ts",
               "line": 9,
               "column": 3
             },
             {
-              "title": "renders the Medium Clone heading",
+              "title": "should display footer with all links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 7603,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:36.386Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-83a887fa39cf7f5691f9",
+              "file": "first-lesson.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "responsive design - mobile view",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 7320,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:36.350Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-254efbed661e1e2b2b26",
+              "file": "first-lesson.spec.ts",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "should display all navigation buttons",
               "ok": true,
               "tags": [],
               "tests": [
@@ -136,27 +200,91 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 3,
                       "status": "passed",
-                      "duration": 6370,
+                      "duration": 7137,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-28T06:47:55.925Z",
+                      "startTime": "2024-11-29T06:34:36.383Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "a30a6eba6312f6b87ea5-0a4f4678e6b47cbd9625",
-              "file": "example.spec.ts",
+              "id": "9170ad62ed911ff49afe-70aff754ec1bb39556fb",
+              "file": "first-lesson.spec.ts",
               "line": 9,
               "column": 3
             },
             {
-              "title": "renders the Medium Clone heading",
+              "title": "should display footer with all links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 5797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:50.144Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-589c521aa418a11113c4",
+              "file": "first-lesson.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "responsive design - mobile view",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6561,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:50.153Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-42559ad48890f7c75a50",
+              "file": "first-lesson.spec.ts",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "should display all navigation buttons",
               "ok": true,
               "tags": [],
               "tests": [
@@ -168,213 +296,101 @@
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 2049,
+                      "duration": 2562,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-28T06:47:58.159Z",
+                      "startTime": "2024-11-29T06:34:50.157Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "a30a6eba6312f6b87ea5-dda53866778c470a90f2",
-              "file": "example.spec.ts",
+              "id": "9170ad62ed911ff49afe-b559bd498270cd93beff",
+              "file": "first-lesson.spec.ts",
               "line": 9,
+              "column": 3
+            },
+            {
+              "title": "should display footer with all links",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 3076,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:50.153Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-6d0037e43d30761e3e6d",
+              "file": "first-lesson.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "responsive design - mobile view",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 3743,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-11-29T06:34:53.751Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9170ad62ed911ff49afe-7af422232ad993e018f4",
+              "file": "first-lesson.spec.ts",
+              "line": 39,
               "column": 3
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "packages.spec.ts",
-      "file": "packages.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "check if required libraries are installed",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "failed",
-                  "duration": 29,
-                  "error": {
-                    "message": "ReferenceError: __dirname is not defined",
-                    "stack": "ReferenceError: __dirname is not defined\n    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40",
-                    "location": {
-                      "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                      "column": 40,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                        "column": 40,
-                        "line": 6
-                      },
-                      "message": "ReferenceError: __dirname is not defined\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-28T06:47:55.911Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                    "column": 40,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "23ca748dc349fcd7e881-17a48b3f10ea831f02ee",
-          "file": "packages.spec.ts",
-          "line": 5,
-          "column": 1
-        },
-        {
-          "title": "check if required libraries are installed",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "failed",
-                  "duration": 45,
-                  "error": {
-                    "message": "ReferenceError: __dirname is not defined",
-                    "stack": "ReferenceError: __dirname is not defined\n    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40",
-                    "location": {
-                      "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                      "column": 40,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                        "column": 40,
-                        "line": 6
-                      },
-                      "message": "ReferenceError: __dirname is not defined\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-28T06:47:56.014Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                    "column": 40,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "23ca748dc349fcd7e881-04a414c7ddb7d0b9da04",
-          "file": "packages.spec.ts",
-          "line": 5,
-          "column": 1
-        },
-        {
-          "title": "check if required libraries are installed",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "failed",
-                  "duration": 50,
-                  "error": {
-                    "message": "ReferenceError: __dirname is not defined",
-                    "stack": "ReferenceError: __dirname is not defined\n    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40",
-                    "location": {
-                      "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                      "column": 40,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                        "column": 40,
-                        "line": 6
-                      },
-                      "message": "ReferenceError: __dirname is not defined\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m\"check if required libraries are installed\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mconst\u001b[39m packageJsonPath \u001b[33m=\u001b[39m path\u001b[33m.\u001b[39mresolve(__dirname\u001b[33m,\u001b[39m \u001b[32m\"./package.json\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m packageJson \u001b[33m=\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(fs\u001b[33m.\u001b[39mreadFileSync(packageJsonPath\u001b[33m,\u001b[39m \u001b[32m\"utf-8\"\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m   \u001b[36mconst\u001b[39m requiredLibraries \u001b[33m=\u001b[39m [\u001b[32m\"@playwright/test\"\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Projects\\medium-clone\\tests\\packages.spec.ts:6:40\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-11-28T06:47:58.544Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "D:\\Projects\\medium-clone\\tests\\packages.spec.ts",
-                    "column": 40,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "23ca748dc349fcd7e881-230a28784fa36c48a80d",
-          "file": "packages.spec.ts",
-          "line": 5,
-          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-28T06:47:54.125Z",
-    "duration": 11037.317000000001,
-    "expected": 3,
+    "startTime": "2024-11-29T06:34:35.186Z",
+    "duration": 25633.77,
+    "expected": 9,
     "skipped": 0,
-    "unexpected": 3,
+    "unexpected": 0,
     "flaky": 0
   }
 }
