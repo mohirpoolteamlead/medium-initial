@@ -139,11 +139,17 @@ jobs:
 
       - name: Finish Status
         run: |
+          status=${{ job.status }}
+          if [ "$status" == "success" ]; then
+            status="completed"
+          else
+            status="failed"
+          fi
           curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
-          --form 'action_status=completed'
+          --form 'action_status=$status'
 
       - name: Send a signal to the webhook that the job has finished.
         if: always()
