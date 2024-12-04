@@ -17,6 +17,22 @@ jobs:
     timeout-minutes: 20
 
     steps:
+      - name: Action Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'action_status=started'
+
+      - name: Clean Environment Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'clean_env_step=started'
+
       - name: Clean environment
         run: |
           rm -rf original-repo
@@ -51,6 +67,14 @@ jobs:
           mv original-repo/tests forked-repo/
           rm -rf original-repo
 
+      - name: Installing Deps Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'install_dependencies_step=started'
+
       - name: Install dependencies
         working-directory: forked-repo
         run: npm ci
@@ -67,6 +91,14 @@ jobs:
         working-directory: forked-repo
         run: npx playwright install --with-deps
 
+      - name: Running Project Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'application_health_step=started'
+
       - name: Start the application
         working-directory: forked-repo
         run: |
@@ -80,6 +112,14 @@ jobs:
             sleep 5
           done
           echo "App is up and running!"
+
+      - name: Playwright Test Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'run_tests_step=started'
 
       - name: Run Playwright tests
         working-directory: forked-repo
@@ -96,6 +136,14 @@ jobs:
           name: playwright-report
           path: forked-repo/playwright-report.json
           retention-days: 30
+
+      - name: Finish Status
+        run: |
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'action_status=completed'
 
       - name: Send a signal to the webhook that the job has finished.
         if: always()
