@@ -138,6 +138,7 @@ jobs:
           retention-days: 30
 
       - name: Finish Status
+        if: always()
         run: |
           status=${{ job.status }}
           if [ "$status" == "success" ]; then
