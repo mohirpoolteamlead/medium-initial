@@ -17,15 +17,6 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      - name: Action Status
-        run: |
-          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
-          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
-          --form 'github_username=${{ github.actor }}' \
-          --form 'github_action_run_id=${{ github.run_id }}' \
-          --form 'action_status=started' \
-          --form 'clean_env_step=started'
-
       - name: Clean environment
         run: |
           rm -rf original-repo
@@ -38,6 +29,13 @@ jobs:
           --form 'github_username=${{ github.actor }}' \
           --form 'action_run_id=${{ github.run_id }}' \
           --form 'status=started'
+
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'action_status=started' \
+          --form 'clean_env_step=started'
 
       - name: Checkout original repository
         uses: actions/checkout@v3
@@ -66,7 +64,6 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
-          --form 'action_status=completed' \
           --form 'clean_env_step=completed' \
           --form 'install_dependencies_step=started'
 
@@ -134,22 +131,6 @@ jobs:
           path: forked-repo/playwright-report.json
           retention-days: 30
 
-      - name: Finish Status
-        if: always()
-        run: |
-          status=${{ job.status }}
-          if [ "$status" == "success" ]; then
-            status="completed"
-          else
-            status="failed"
-          fi
-          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
-          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
-          --form 'github_username=${{ github.actor }}' \
-          --form 'github_action_run_id=${{ github.run_id }}' \
-          --form 'run_tests_step=completed' \
-          --form "action_status=$status"
-
       - name: Send a signal to the webhook that the job has finished.
         if: always()
         run: |
@@ -159,6 +140,14 @@ jobs:
           else
             status="failed"
           fi
+
+          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
+          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
+          --form 'github_username=${{ github.actor }}' \
+          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'run_tests_step=completed' \
+          --form "action_status=$status"
+
           curl -X PUT --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-feedbacks/${{ github.event.inputs.github_feedback_id }}/' \
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
