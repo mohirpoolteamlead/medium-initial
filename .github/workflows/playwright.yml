@@ -23,14 +23,7 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
-          --form 'action_status=started'
-
-      - name: Clean Environment Status
-        run: |
-          curl -X 'POST' --location 'https://api-dev.mohirpool.uz/api/site/accelerators/code-reviews/github-workflows/' \
-          --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
-          --form 'github_username=${{ github.actor }}' \
-          --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'action_status=started' \
           --form 'clean_env_step=started'
 
       - name: Clean environment
@@ -73,6 +66,8 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'action_status=completed' \
+          --form 'clean_env_step=completed' \
           --form 'install_dependencies_step=started'
 
       - name: Install dependencies
@@ -97,6 +92,7 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'install_dependencies_step=completed' \
           --form 'application_health_step=started'
 
       - name: Start the application
@@ -119,6 +115,7 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'application_health_step=completed' \
           --form 'run_tests_step=started'
 
       - name: Run Playwright tests
@@ -150,6 +147,7 @@ jobs:
           --header 'X-API-KEY: ${{ secrets.X_API_KEY }}' \
           --form 'github_username=${{ github.actor }}' \
           --form 'github_action_run_id=${{ github.run_id }}' \
+          --form 'run_tests_step=completed' \
           --form "action_status=$status"
 
       - name: Send a signal to the webhook that the job has finished.
