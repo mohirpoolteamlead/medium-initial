@@ -1,6 +1,11 @@
+import { AuthScreen } from "@/utils/enums/auth.enum";
 import heroImage from "../../assets/home_hero.png";
 
-export const HeroSection = () => {
+interface IProps {
+  openModal: (screen: AuthScreen) => void;
+}
+
+export const HeroSection = ({ openModal }: IProps) => {
   return (
     <div className="hero h-4/5 border-b overflow-hidden border-black flex items-center justify-between">
       <div className="p-4 md:pl-36">
@@ -11,7 +16,11 @@ export const HeroSection = () => {
           A place to read, write, and deepen your understanding
         </p>
 
-        <button className="mt-8 h-12 rounded-full text-lg px-12 ">
+        <button
+          onClick={() => openModal(AuthScreen.REGISTER)}
+          className="mt-8 h-12 rounded-full text-lg px-12 bg-black text-white"
+          role="button"
+        >
           Start Reading
         </button>
       </div>

@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\Projects\\medium-clone\\playwright.config.ts",
-    "rootDir": "D:/Projects/medium-clone/tests",
+    "configFile": "D:\\Mohirpool\\Projects\\medium-initial\\playwright.config.ts",
+    "rootDir": "D:/Mohirpool/Projects/medium-initial/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -29,46 +29,46 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/Projects/medium-clone/test-results",
+        "outputDir": "D:/Mohirpool/Projects/medium-initial/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/Projects/medium-clone/tests",
+        "testDir": "D:/Mohirpool/Projects/medium-initial/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       },
       {
-        "outputDir": "D:/Projects/medium-clone/test-results",
+        "outputDir": "D:/Mohirpool/Projects/medium-initial/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
-        "testDir": "D:/Projects/medium-clone/tests",
+        "testDir": "D:/Mohirpool/Projects/medium-initial/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       },
       {
-        "outputDir": "D:/Projects/medium-clone/test-results",
+        "outputDir": "D:/Mohirpool/Projects/medium-initial/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
-        "testDir": "D:/Projects/medium-clone/tests",
+        "testDir": "D:/Mohirpool/Projects/medium-initial/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       }
     ],
     "shard": null,
@@ -79,25 +79,25 @@
   },
   "suites": [
     {
-      "title": "first-lesson.spec.ts",
-      "file": "first-lesson.spec.ts",
+      "title": "second-lesson.spec.ts",
+      "file": "second-lesson.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Home Page",
-          "file": "first-lesson.spec.ts",
+          "title": "Auth Modal",
+          "file": "second-lesson.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "should display all navigation buttons",
+              "title": "should open login modal when clicking Sign in",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -106,30 +106,30 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6968,
+                      "duration": 3637,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:36.279Z",
+                      "startTime": "2025-02-24T12:41:20.056Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-67a8612a9cd8332733dc",
-              "file": "first-lesson.spec.ts",
+              "id": "afb3abf29f427f6ce893-133103e2ec2b58527a2f",
+              "file": "second-lesson.spec.ts",
               "line": 9,
               "column": 3
             },
             {
-              "title": "should display footer with all links",
+              "title": "should open register modal when clicking Get Started",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -138,30 +138,30 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 7603,
+                      "duration": 3235,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:36.386Z",
+                      "startTime": "2025-02-24T12:41:20.064Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-83a887fa39cf7f5691f9",
-              "file": "first-lesson.spec.ts",
-              "line": 19,
+              "id": "afb3abf29f427f6ce893-8bd538b926bda4c4db9d",
+              "file": "second-lesson.spec.ts",
+              "line": 25,
               "column": 3
             },
             {
-              "title": "responsive design - mobile view",
+              "title": "should switch between login and register screens",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -170,62 +170,110 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 7320,
+                      "duration": 4787,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:36.350Z",
+                      "startTime": "2025-02-24T12:41:20.130Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-254efbed661e1e2b2b26",
-              "file": "first-lesson.spec.ts",
-              "line": 39,
+              "id": "afb3abf29f427f6ce893-1368dbc961ccb6d2d021",
+              "file": "second-lesson.spec.ts",
+              "line": 45,
               "column": 3
             },
             {
-              "title": "should display all navigation buttons",
+              "title": "should close modal when clicking outside",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 3910,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-24T12:41:20.097Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "afb3abf29f427f6ce893-8ebe03a01036d082cfdf",
+              "file": "second-lesson.spec.ts",
+              "line": 64,
+              "column": 3
+            },
+            {
+              "title": "should open login modal when clicking Sign in",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 7137,
-                      "errors": [],
+                      "workerIndex": 5,
+                      "status": "timedOut",
+                      "duration": 60028,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\Mohirpool\\Projects\\medium-initial\\tests\\second-lesson.spec.ts",
+                            "column": 24,
+                            "line": 16
+                          },
+                          "message": "Error: locator.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('Sign in')\u001b[22m\n\u001b[2m    - locator resolved to <li class=\"hidden md:block cursor-pointer\">Sign in</li>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m signInButton \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Sign in\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(signInButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m signInButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[90m// Verify login form elements\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mconst\u001b[39m form \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"form\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Mohirpool\\Projects\\medium-initial\\tests\\second-lesson.spec.ts:16:24\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:36.383Z",
+                      "startTime": "2025-02-24T12:41:27.868Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-70aff754ec1bb39556fb",
-              "file": "first-lesson.spec.ts",
+              "id": "afb3abf29f427f6ce893-2bb9478cb657b0c1f339",
+              "file": "second-lesson.spec.ts",
               "line": 9,
               "column": 3
             },
             {
-              "title": "should display footer with all links",
-              "ok": true,
+              "title": "should open register modal when clicking Get Started",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
@@ -233,31 +281,47 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 5797,
-                      "errors": [],
+                      "status": "timedOut",
+                      "duration": 60037,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\Mohirpool\\Projects\\medium-initial\\tests\\second-lesson.spec.ts",
+                            "column": 16,
+                            "line": 28
+                          },
+                          "message": "Error: page.waitForLoadState: Test timeout of 60000ms exceeded.\n\n\u001b[0m \u001b[90m 26 |\u001b[39m     page\u001b[33m,\u001b[39m\n \u001b[90m 27 |\u001b[39m   }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m\n \u001b[90m 30 |\u001b[39m     \u001b[90m// Click Get Started\u001b[39m\n \u001b[90m 31 |\u001b[39m     \u001b[36mconst\u001b[39m getStartedButton \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Get Started\"\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Mohirpool\\Projects\\medium-initial\\tests\\second-lesson.spec.ts:28:16\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:50.144Z",
+                      "startTime": "2025-02-24T12:41:27.892Z",
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-589c521aa418a11113c4",
-              "file": "first-lesson.spec.ts",
-              "line": 19,
+              "id": "afb3abf29f427f6ce893-76e82974adeab25208d1",
+              "file": "second-lesson.spec.ts",
+              "line": 25,
               "column": 3
             },
             {
-              "title": "responsive design - mobile view",
+              "title": "should switch between login and register screens",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "firefox",
@@ -266,117 +330,181 @@
                     {
                       "workerIndex": 4,
                       "status": "passed",
-                      "duration": 6561,
+                      "duration": 8267,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:50.153Z",
+                      "startTime": "2025-02-24T12:41:27.947Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-42559ad48890f7c75a50",
-              "file": "first-lesson.spec.ts",
-              "line": 39,
+              "id": "afb3abf29f427f6ce893-5f954e690ddc65445f73",
+              "file": "second-lesson.spec.ts",
+              "line": 45,
               "column": 3
             },
             {
-              "title": "should display all navigation buttons",
+              "title": "should close modal when clicking outside",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "status": "passed",
-                      "duration": 2562,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-11-29T06:34:50.157Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "9170ad62ed911ff49afe-b559bd498270cd93beff",
-              "file": "first-lesson.spec.ts",
-              "line": 9,
-              "column": 3
-            },
-            {
-              "title": "should display footer with all links",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
                   "results": [
                     {
                       "workerIndex": 7,
                       "status": "passed",
-                      "duration": 3076,
+                      "duration": 11702,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:50.153Z",
+                      "startTime": "2025-02-24T12:41:28.114Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-6d0037e43d30761e3e6d",
-              "file": "first-lesson.spec.ts",
-              "line": 19,
+              "id": "afb3abf29f427f6ce893-52d86426dbf6d6277370",
+              "file": "second-lesson.spec.ts",
+              "line": 64,
               "column": 3
             },
             {
-              "title": "responsive design - mobile view",
+              "title": "should open login modal when clicking Sign in",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "webkit",
                   "projectName": "webkit",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 8,
                       "status": "passed",
-                      "duration": 3743,
+                      "duration": 2530,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-11-29T06:34:53.751Z",
+                      "startTime": "2025-02-24T12:41:46.893Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "9170ad62ed911ff49afe-7af422232ad993e018f4",
-              "file": "first-lesson.spec.ts",
-              "line": 39,
+              "id": "afb3abf29f427f6ce893-fa9c10a43f7ad095fc62",
+              "file": "second-lesson.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "should open register modal when clicking Get Started",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 2635,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-24T12:41:46.888Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "afb3abf29f427f6ce893-8ae54db461ea123eaffa",
+              "file": "second-lesson.spec.ts",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "should switch between login and register screens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "status": "passed",
+                      "duration": 2939,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-24T12:41:49.587Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "afb3abf29f427f6ce893-00fa69531e6730e7722a",
+              "file": "second-lesson.spec.ts",
+              "line": 45,
+              "column": 3
+            },
+            {
+              "title": "should close modal when clicking outside",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 2641,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-24T12:41:49.672Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "afb3abf29f427f6ce893-a525327de722f8ba2070",
+              "file": "second-lesson.spec.ts",
+              "line": 64,
               "column": 3
             }
           ]
@@ -386,11 +514,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-29T06:34:35.186Z",
-    "duration": 25633.77,
-    "expected": 9,
+    "startTime": "2025-02-24T12:41:18.902Z",
+    "duration": 72920.481,
+    "expected": 10,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }
